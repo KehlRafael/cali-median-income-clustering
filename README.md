@@ -1,2 +1,2 @@
-# california-medium-income
- Simple k-means algorithm to group households by medium income.
+# cali-median-income-clustering
+ Simple k-means algorithm to group households by median income and location.
