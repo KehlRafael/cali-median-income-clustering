@@ -6,7 +6,7 @@ function indexes = getClosest(data, K)
   indexes = zeros(size(data,1), 1);
   m = size(data,1);
   % Calculates distance between each point and the Ks
-  % No need to square the distance, so it runs faster
+  % We use the norm 2, or the euclidean distance
   for i=1:m
     k = 1;
     min_dist = norm(data(i,:)-K(1,:), 2);
