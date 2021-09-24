@@ -9,9 +9,9 @@ function indexes = getClosest(data, K)
   % No need to square the distance, so it runs faster
   for i=1:m
     k = 1;
-    min_dist = sum((data(i,:) - data(1,:)) .^ 2);
+    min_dist = norm(data(i,:)-K(1,:), 2);
     for j=2:n
-        dist = sum((data(i,:) - data(j,:)) .^ 2);
+        dist = norm(data(i,:)-K(j,:), 2);
         if(dist < min_dist)
           min_dist = dist;
           k = j;
